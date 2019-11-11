@@ -1,5 +1,5 @@
 # jacobi-eigenvalue-algorithm-cpp
-[Jacobi eigenvalue algorithm](https://en.wikipedia.org/wiki/Jacobi_eigenvalue_algorithm) realization on C++
+[Jacobi eigenvalue algorithm](https://en.wikipedia.org/wiki/Jacobi_eigenvalue_algorithm) realization in C++
 
 # Example
 Compile sources:
@@ -10,7 +10,7 @@ Launch:
 ```
 ./a.out
 ```
-Enter your symmetric matrix dimenstion and matrix itself (Note that jacobi eigenvalue algorithm works only for symmetric matricies) and get solution:
+Enter your symmetric matrix dimension and matrix itself (Note that jacobi eigenvalue algorithm works only for symmetric matrices) and get solution:
 ```
 5
 -51  21 -84 -60 -16 
@@ -34,11 +34,11 @@ X5: 0.223901 0.562712 0.204848 -0.0778015 0.764988
 Number of iterations: 34
 ```
 # Some notes
-* This programm will output eigenvectors to output.txt file if your matrix dimension is more than 10
-* On every iteration of algorithm we need to choose `i` and `j` indicies to zero corresponding element in matrix. There are 3 strategies implemented: 
+* This program will output eigenvectors to output.txt file if your matrix dimension is more than 10
+* On every iteration of algorithm we need to choose `i` and `j` indices to zero corresponding element in matrix. There are 3 strategies implemented: 
   1. off-diagonal element with maximum absolute value
   2. off-diagonal element with maximum absolute value on the row having maximum sum of squares of off-diagonal elements
-  3. off-diagonal cycle element choice. Just choose off-diagoanl elements by cycle: 
+  3. off-diagonal cycle element choice. Just choose off-diagonal elements by cycle: 
      ![note](https://latex.codecogs.com/gif.latex?a_%7B12%7D%2C%20a_%7B13%7D%2C%20a_%7B14%7D%2C%20...%2C%20a_%7B21%7D%2C%20a_%7B23%7D%2C%20a_%7B24%7D%2C%20...)  
   you can specify strategy via command line arguments: `[strategy]`
 * You can change f function in sources:
